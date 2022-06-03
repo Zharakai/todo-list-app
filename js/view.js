@@ -197,13 +197,12 @@
 
 	/**
 	 * @memberof View
-	 * @description wip
+	 * @description Manage display when edit is over
 	 * 
-	 * @param {*} handler 
+	 * @param {function} handler 
 	 */
 	View.prototype._bindItemEditDone = function (handler) {
 		var self = this;
-		console.log(this, handler);
 		$delegate(self.$todoList, 'li .edit', 'blur', function () {
 			if (!this.dataset.iscanceled) {
 				handler({
@@ -224,9 +223,9 @@
 
 	/**
 	 * @memberof View
-	 * @description wip
+	 * @description Bind an event listener
 	 * 
-	 * @param {*} handler 
+	 * @param {function} handler
 	 */
 	View.prototype._bindItemEditCancel = function (handler) {
 		var self = this;
@@ -242,10 +241,10 @@
 
 	/**
 	 * @memberof View
-	 * @description wip
+	 * @description Bind events
 	 * 
-	 * @param {*} event 
-	 * @param {*} handler 
+	 * @param {string} event 
+	 * @param {function} handler 
 	 */
 	View.prototype.bind = function (event, handler) {
 		var self = this;
