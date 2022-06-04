@@ -114,8 +114,6 @@
 	 * @param {boolean} useCapture
 	 */
 	window.$on = function (target, type, callback, useCapture) {
-		console.log(useCapture);
-		console.log(typeof useCapture);
 		target.addEventListener(type, callback, !!useCapture);
 	};
 
@@ -155,7 +153,6 @@
 	 * @param {string} tagName 
 	 */
 	window.$parent = function (element, tagName) {
-		console.log(element);
 		if (!element.parentNode) {
 			return;
 		}
